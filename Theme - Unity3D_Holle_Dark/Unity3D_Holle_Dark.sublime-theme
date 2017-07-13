@@ -461,8 +461,8 @@
     // Sidebar tree
     {
         "class": "sidebar_tree",
-        "row_padding": [8, 4],
-        "indent": 10,
+        "row_padding": [8, 2],
+        "indent": 15,
         "indent_offset": 15,
         "indent_top_level": false,
         "dark_content": true
@@ -501,7 +501,8 @@
         "color": [210, 210, 210],
         "font.bold": true,
         "shadow_color": [0, 0, 0],
-        "shadow_offset": [0, -1]
+        "shadow_offset": [0, -1],
+        "font.size": 14
     },
     // Sidebar entry
     {
@@ -509,17 +510,23 @@
         "color": [125, 125, 125],
         "shadow_color": [0, 0, 0],
         "shadow_offset": [0, -1],
-        "font.size": 12
+        "font.size": 12,
+        "font.bold": false,
+        "font_face": "Holle Sans Mono"
     },
     {
         "class": "sidebar_label",
         "settings": ["sidebar_font_big"],
-        "font.size": 14
+        "font.bold": false,
+        "font.size": 14,
+        "font_face": "Holle Sans Mono"
     },
     {
         "class": "sidebar_label",
         "settings": ["sidebar_font_small"],
-        "font.size": 10
+        "font.size": 10,
+        "font.bold": false,
+        "font_face": "Holle Sans Mono"
     },
     // Sidebar folder entry
     {
@@ -535,8 +542,7 @@
     {
         "class": "sidebar_label",
         "parents": [{"class": "tree_row", "attributes": ["expandable"]}],
-        "settings": ["bold_folder_labels"],
-        "font.bold": true
+        "settings": ["bold_folder_labels"]
     },
     // Sidebar entry selected
     {

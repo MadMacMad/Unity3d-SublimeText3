@@ -115,10 +115,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(?x)^\s*
-((?:\b(?:new|public|protected|internal|private|abstract|sealed|static)\b\s)*)
-(class)\s+
-([A-Za-z_]\w+)\b</string>
+			<string>(?x)^\s*((?:\b(?:new|public|protected|internal|private|abstract|sealed|static)\b\s)*)(class)\s+([A-Za-z_]\w+)\b</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -149,19 +146,11 @@
 				</dict>
 			</array>
 		</dict>
-		<!--
-		Disabled because it causes some lines to be interpreted incorrectly, for example:
-			else if (c == ')')
-		--->
+
 
 		<dict>
 			<key>begin</key>
-			<string>(?x)^\s*	                                                                            # start of line
-((?:\b(?:new|public|protected|internal|private|static|virtual|sealed|override|abstract|extern)\b\s*)*) 		# method-modifiers
-\b((?:\w+\.)*[A-Za-z_]\w*)\b\s*	                                                                      		# type
-(operator)\s+        			                                                                      		# operator overload
-((?:\+|-|!|~|\+\+|--|true|false|\*|/|%|\&amp;|\||\^|&lt;&lt;|&gt;&gt;|==|!=|&lt;|&gt;|&lt;=|&gt;=)\s*)	                          		# operator name
-(?=\()</string>
+			<string>(?x)^\s*((?:\b(?:new|public|protected|internal|private|static|virtual|sealed|override|abstract|extern)\b\s*)*)\b((?:\w+\.)*[A-Za-z_]\w*)\b\s*(operator)\s+((?:\+|-|!|~|\+\+|--|true|false|\*|/|%|\&amp;|\||\^|&lt;&lt;|&gt;&gt;|==|!=|&lt;|&gt;|&lt;=|&gt;=)\s*)(?=\()</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -199,11 +188,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(?x)^\s*	                                                                        # start of line
-((?:\b(?:new|public|protected|internal|private|static|virtual|sealed|override|abstract|extern)\b\s*)*) 	# method-modifiers
-\b((?:\w+\.)*[A-Za-z_]\w*)\b\s*		                                                                  	# type
-([A-Za-z_]\w*)\s*					         			                                   			 	# name
-(?=\()</string>
+			<string>(?x)^\s*((?:\b(?:new|public|protected|internal|private|static|virtual|sealed|override|abstract|extern)\b\s*)*)\b((?:\w+\.)*[A-Za-z_]\w*)\b\s*([A-Za-z_]\w*)\s*(?=\()</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -236,9 +221,8 @@
 		</dict>
 
 
-		<!--
-		Trying to add some Unity Function Keywords
-		--->
+		
+		
 
 		<dict>
 			<key>match</key>
@@ -247,9 +231,7 @@
 			<string>entity.name.other.source.cs</string>
 		</dict>
 
-		<!--
-		Adding some Unity Class Keywords
-		--->
+		
 
 		<dict>
 			<key>match</key>
