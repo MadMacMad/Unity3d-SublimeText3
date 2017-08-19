@@ -1,3 +1,11 @@
+Hello,
+Plz install the font too.
+
+Steps to make it work perfect:
+1. Install Mono: http://www.mono-project.com/download/
+2. Install font… see font folder here…
+3. Setup Sublime with these preference:
+
 {
 	"bold_folder_labels": true,
 	"caret_extra_bottom": 2,
@@ -24,6 +32,7 @@
 	"ignored_packages":
 	[
 		"Markdown",
+		"Unity Completions",
 		"Unity3d LeanTween Snippets",
 		"Vintage"
 	],
